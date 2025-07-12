@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 
 const DashboardLayout = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen font-inter">
       <Sidebar />
       <Outlet />
     </div>

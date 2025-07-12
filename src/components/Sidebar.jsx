@@ -23,7 +23,7 @@ const sidebar = [
 ];
 const Sidebar = () => {
   return (
-    <div className="hidden md:w-[100px] lg:w-[200px] bg-blue-600 md:flex flex-col items-center p-4">
+    <div className="hidden md:w-[150px] lg:w-[200px] bg-blue-600 md:flex flex-col items-center p-4">
       <h2 className="text-white text-lg font-bold font-abz">Taskyz</h2>
       <div className="mt-5 space-y-2">
         {sidebar.map((item) => (

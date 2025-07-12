@@ -3,7 +3,7 @@ import { FaUsers, FaTasks } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="w-full md:w-[calc(100%-150px)] lg:w-[calc(100%-250px)] flex flex-col items-center justify-center h-screen bg-gray-100 ">
       <h1 className="text-4xl font-bold mb-4">Welcome to Taskyz</h1>
       <p className="text-lg mb-6">Your task management solution</p>
       <div className="flex space-x-4">
