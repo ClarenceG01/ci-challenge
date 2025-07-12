@@ -32,6 +32,7 @@ return (
 				Add User
 			</button>
 		</div>
+		<div className="w-full overflow-x-auto">
 		<table className="table table-zebra font-abz">
 			<thead>
 				<tr>
@@ -65,6 +66,7 @@ return (
 				))}
 			</tbody>
 		</table>
+	</div>
 		{showModal &&
 			createPortal(
 				<AddUserModal setShowModal={setShowModal} />,
