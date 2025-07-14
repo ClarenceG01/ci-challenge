@@ -6,19 +6,19 @@ const sidebar = [
     name: "Home",
     route: "/",
     icon: <FaHome className="size-6"/>,
-    role: "admin",
+    role: ["admin"],
   },
   {
     name: "Users",
     route: "/users",
     icon: <FaUsers className="size-6"/>,
-    role: "admin",
+    role: ["admin"],
   },
   {
     name: "Tasks",
     route: "/tasks",
     icon: <FaTasks className="size-6"/>,
-    role: "admin | user",
+    role: ["admin", "user"],
   },
 ];
 const Sidebar = () => {
