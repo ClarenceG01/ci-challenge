@@ -11,10 +11,10 @@ const Home = () => {
       {user && (
         <div className="w-full absolute top-0 right-0 p-4 flex items-center justify-between">
           <p className="font-abz text-lg">{user.username}</p>
-          <div className="flex flex-col ">
+          {/* <div className="flex flex-col ">
             <MdOutlineLogout className="size-6 cursor-pointer" />
             <p>Logout</p>
-          </div>
+          </div> */}
         </div>
       )}
       <h1 className="text-4xl font-bold mb-4">Welcome to Taskyz</h1>
