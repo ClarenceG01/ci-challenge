@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="w-full md:w-[calc(100%-150px)] lg:w-[calc(100%-250px)] flex flex-col items-center justify-center h-screen relative font-inter">
       {user && (
-        <div className="w-full absolute top-0 p-4 bg-red-700 flex items-center justify-between">
+        <div className="w-full absolute top-0 right-0 p-4 flex items-center justify-between">
           <p className="font-abz text-lg">{user.username}</p>
           <div className="flex flex-col ">
             <MdOutlineLogout className="size-6 cursor-pointer" />

@@ -44,17 +44,17 @@ const Users = () => {
         headers: {
           "Content-Type": "application/json",
         },
-		credentials: "include",
+        credentials: "include",
       });
-	  if(!response.ok) {
-		errorToast("Failed to delete user", "delete-user-e");
-		return;
-	  }
-	  successToast("User deleted successfully", "delete-user-s");
-	  refetch();
+      if (!response.ok) {
+        errorToast("Failed to delete user", "delete-user-e");
+        return;
+      }
+      successToast("User deleted successfully", "delete-user-s");
+      refetch();
     } catch (error) {
       console.error("Error deleting user:", error);
-	  errorToast("Failed to delete user", "delete-user-e");
+      errorToast("Failed to delete user", "delete-user-e");
     }
   };
   return (
@@ -95,7 +95,7 @@ const Users = () => {
             <tbody>
               {users.map((user) => (
                 <tr key={user._id}>
-                  <td className="text-center">{id + 1}</td>
+                  <td className="text-center">{id++}</td>
                   <td className="text-center">{user.username}</td>
                   <td className="text-center">{user.email}</td>
                   <td className="text-center flex gap-2 justify-center">
