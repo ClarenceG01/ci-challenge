@@ -40,13 +40,14 @@ const Login = () => {
   };
 
   return (
-    <div className=" w-full flex items-center justify-center min-h-screen font-inter">
+    <div className=" w-full flex flex-col items-center justify-center min-h-screen font-inter">
+      
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="block mx-auto p-6 rounded shadow-md w-80 dark:bg-gray-800"
       >
-        <h2 className="text-lg text-center font-abz font-bold mb-4">Login</h2>
-        <div className="mb-4">
+        <h2 className="text-xl font-semibold font-abz text-center">Taskyz Login</h2>
+        <div className="mb-4 mt-2">
           <label className="block text-sm font-medium mb-1" htmlFor="email">
             Email
           </label>
