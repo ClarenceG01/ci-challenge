@@ -2,6 +2,7 @@ import { IoMdClose } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { errorToast, successToast } from "../utils/toast";
 import { useMutation } from "@tanstack/react-query";
+import { useState } from "react";
 
 const addTask = async (data) => {
   const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/`, {
@@ -15,7 +16,9 @@ const addTask = async (data) => {
   return response.json();
 };
 const AddTaskModal = ({ setShowModal, users, updateTasks }) => {
+  const [loading, setLoading] = useState(false);
   const { register, handleSubmit } = useForm();
+  updateTasks();
   const mutation = useMutation({
     mutationFn: addTask,
     onSuccess: () => {
@@ -28,13 +31,14 @@ const AddTaskModal = ({ setShowModal, users, updateTasks }) => {
     onError: () => {
       errorToast("Failed to add task", "add-task-e");
     },
+    onMutate: () => {
+      setLoading(true);
+    },
   });
 
   const onSubmit = async (data) => {
     mutation.mutate(data);
   };
-    
- 
 
   return (
     <div className="fixed inset-0 flex  justify-center bg-slate-900/90 text-black">
@@ -78,7 +82,7 @@ const AddTaskModal = ({ setShowModal, users, updateTasks }) => {
               {...register("userId", { required: true })}
             >
               <option value="">Select User</option>
-              {users.map((user) => (
+              {(users || []).map((user) => (
                 <option key={user._id} value={user._id}>
                   {user.username}
                 </option>
@@ -98,7 +102,7 @@ const AddTaskModal = ({ setShowModal, users, updateTasks }) => {
             type="submit"
             className="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-700 hover:scale-102 transition-all duration-300"
           >
-            Add Task
+            {loading ? "Adding..." : "Add Task"}
           </button>
         </form>
       </div>
