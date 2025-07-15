@@ -10,7 +10,7 @@ const EditTaskStatusModal = ({ setShowModal, task, updateTasks }) => {
 
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(`/api/tasks/${task._id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${task._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: data.status }),

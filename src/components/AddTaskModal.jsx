@@ -4,7 +4,7 @@ import { errorToast, successToast } from "../utils/toast";
 import { useMutation } from "@tanstack/react-query";
 
 const addTask = async (data) => {
-  const response = await fetch("/api/tasks", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

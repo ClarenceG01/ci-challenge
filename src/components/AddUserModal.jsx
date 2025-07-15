@@ -16,7 +16,7 @@ const AddUserModal = ({ setShowModal, updateUsersList }) => {
         password: data.password,
         role: "user",
       };
-      const response = await fetch("/api/users", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ import { useAuth } from "../context/authContext";
 import EditTaskStatusModal from "../components/EditTaskStatusModal";
 
 const fetchUsers = async () => {
-  const response = await fetch("/api/users", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const fetchUsers = async () => {
   return await response.json();
 };
 const fetchAllTasks = async () => {
-  const response = await fetch("/api/tasks", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks`, {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const fetchAllTasks = async () => {
   return await response.json();
 };
 const fetchUserTasks = async (username) => {
-  const response = await fetch(`/api/tasks/${username}`, {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${username}`, {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",

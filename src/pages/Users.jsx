@@ -8,7 +8,7 @@ import { errorToast, successToast } from "../utils/toast";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchUsers = async () => {
-  const response = await fetch("/api/users", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const Users = () => {
 
   const handleDelete = async (userId) => {
     try {
-      const response = await fetch(`/api/users/${userId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

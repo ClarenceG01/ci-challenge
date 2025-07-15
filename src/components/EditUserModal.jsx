@@ -11,7 +11,7 @@ const EditUserModal = ({ setShowModal, user, updateUsersList }) => {
   const onSubmit = async (data) => {
     console.log(user._id);
     try {
-      const response = await fetch(`/api/users/${user._id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${user._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
