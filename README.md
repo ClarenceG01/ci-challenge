@@ -1,12 +1,32 @@
-# React + Vite
+# 🚀 Taskyz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Taskyz is a **task management system** that helps administrators manage users and assign tasks with deadlines.  
+It also allows users to track and update the status of their tasks. Users are notified via email when new tasks are assigned.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 🛠 Administrator
+- ✅ Add, edit, and delete users.
+- ✅ Assign tasks to users and set deadlines.
+- ✅ View and manage all tasks.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👤 Users
+- ✅ View tasks assigned to them.
+- ✅ Update the status of tasks to:
+  - **Pending**
+  - **In Progress**
+  - **Completed**
+- ✅ Receive email notifications when new tasks are assigned.
+
+---
+
+## ⚙️ Tech Stack
+- **Frontend:** React (Vite) + TailwindCSS
+- **Backend:** Node.js + Express [Backend Repo](https://github.com/ClarenceG01/ci-challenge-backend)
+- **Database:** MongoDB (via Mongoose)
+- **Email:** Nodemailer
+- **Authentication:** JWT-based
+
+---
